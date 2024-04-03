@@ -40,7 +40,6 @@ public class BKwriter {
 			return;
 		}
 
-		String furl = AliDip2BK.BKURL + "/api/lhcFills";
 		String mydata = "{";
 		mydata = mydata + "\n\"fillingSchemeName\":\"" + lhc.LHCFillingSchemeName + "\",";
 		mydata = mydata + "\n\"beamType\":\"" + lhc.beamType + "\",";
@@ -54,6 +53,10 @@ public class BKwriter {
 
 		AliDip2BK.log(1, "BKwriter.InserFill", "FILL INSERT JSON request=\n" + mydata);
 
+		String furl = AliDip2BK.BKURL + "/api/lhcFills";
+		if (AliDip2BK.BKP_TOKEN != null) {
+			furl += "?token=" + AliDip2BK.BKP_TOKEN;
+		}
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(furl))
 				.header("Content-Type", "application/json")
@@ -78,6 +81,9 @@ public class BKwriter {
 	public boolean XTestFillNo(LhcInfoObj lhc) {
 
 		String furl = AliDip2BK.BKURL + "/api/lhcFills/" + lhc.fillNo;
+		if (AliDip2BK.BKP_TOKEN != null) {
+			furl += "?token=" + AliDip2BK.BKP_TOKEN;
+		}
 
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(furl))
@@ -116,6 +122,9 @@ public class BKwriter {
 	public boolean TestRunNo(int N) {
 
 		String furl = AliDip2BK.BKURL + "/api/runs?filter[runNumbers]=" + N;
+		if (AliDip2BK.BKP_TOKEN != null) {
+			furl += "&token=" + AliDip2BK.BKP_TOKEN;
+		}
 
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(furl))
@@ -243,6 +252,9 @@ public class BKwriter {
 		AliDip2BK.log(1, "BKwriter.UpdateRun", "RUN =" + runObj.RunNo + " UPDATE JSON request=\n" + mydata);
 
 		String furl = AliDip2BK.BKURL + "/api/runs?runNumber=" + runObj.RunNo;
+		if (AliDip2BK.BKP_TOKEN != null) {
+			furl += "&token=" + AliDip2BK.BKP_TOKEN;
+		}
 
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(furl))
@@ -323,6 +335,9 @@ public class BKwriter {
 		AliDip2BK.log(1, "BKwriter.UpdateFILL", "UPDATE FILL=" + cfill.fillNo + " JSON request=\n" + mydata);
 
 		String furl = AliDip2BK.BKURL + "/api/lhcFills/" + cfill.fillNo;
+		if (AliDip2BK.BKP_TOKEN != null) {
+			furl += "?token=" + AliDip2BK.BKP_TOKEN;
+		}
 
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(furl))
