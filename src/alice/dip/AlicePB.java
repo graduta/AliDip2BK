@@ -4,7 +4,9 @@
 package alice.dip;
 
 public final class AlicePB {
-  private AlicePB() {}
+  private AlicePB() {
+  }
+
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -14,20 +16,25 @@ public final class AlicePB {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+
   public interface NewStateNotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:alice.dip.NewStateNotification)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>.alice.dip.EnvInfo envInfo = 1;</code>
+     * 
      * @return Whether the envInfo field is set.
      */
     boolean hasEnvInfo();
+
     /**
      * <code>.alice.dip.EnvInfo envInfo = 1;</code>
+     * 
      * @return The envInfo.
      */
     alice.dip.AlicePB.EnvInfo getEnvInfo();
+
     /**
      * <code>.alice.dip.EnvInfo envInfo = 1;</code>
      */
@@ -39,10 +46,12 @@ public final class AlicePB {
      * </pre>
      *
      * <code>uint64 timestamp = 2;</code>
+     * 
      * @return The timestamp.
      */
     long getTimestamp();
   }
+
   /**
    * Protobuf type {@code alice.dip.NewStateNotification}
    */
@@ -50,26 +59,28 @@ public final class AlicePB {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:alice.dip.NewStateNotification)
       NewStateNotificationOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
+
     // Use NewStateNotification.newBuilder() to construct.
     private NewStateNotification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private NewStateNotification() {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
+    @SuppressWarnings({ "unused" })
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new NewStateNotification();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private NewStateNotification(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -78,8 +89,7 @@ public final class AlicePB {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -127,14 +137,13 @@ public final class AlicePB {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return alice.dip.AlicePB.internal_static_alice_dip_NewStateNotification_descriptor;
     }
 
     @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
       return alice.dip.AlicePB.internal_static_alice_dip_NewStateNotification_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               alice.dip.AlicePB.NewStateNotification.class, alice.dip.AlicePB.NewStateNotification.Builder.class);
@@ -142,22 +151,27 @@ public final class AlicePB {
 
     public static final int ENVINFO_FIELD_NUMBER = 1;
     private alice.dip.AlicePB.EnvInfo envInfo_;
+
     /**
      * <code>.alice.dip.EnvInfo envInfo = 1;</code>
+     * 
      * @return Whether the envInfo field is set.
      */
     @java.lang.Override
     public boolean hasEnvInfo() {
       return envInfo_ != null;
     }
+
     /**
      * <code>.alice.dip.EnvInfo envInfo = 1;</code>
+     * 
      * @return The envInfo.
      */
     @java.lang.Override
     public alice.dip.AlicePB.EnvInfo getEnvInfo() {
       return envInfo_ == null ? alice.dip.AlicePB.EnvInfo.getDefaultInstance() : envInfo_;
     }
+
     /**
      * <code>.alice.dip.EnvInfo envInfo = 1;</code>
      */
@@ -168,12 +182,14 @@ public final class AlicePB {
 
     public static final int TIMESTAMP_FIELD_NUMBER = 2;
     private long timestamp_;
+
     /**
      * <pre>
      * ms since epoch
      * </pre>
      *
      * <code>uint64 timestamp = 2;</code>
+     * 
      * @return The timestamp.
      */
     @java.lang.Override
@@ -182,11 +198,14 @@ public final class AlicePB {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+      if (isInitialized == 1)
+        return true;
+      if (isInitialized == 0)
+        return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -194,7 +213,7 @@ public final class AlicePB {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+        throws java.io.IOException {
       if (envInfo_ != null) {
         output.writeMessage(1, getEnvInfo());
       }
@@ -207,16 +226,17 @@ public final class AlicePB {
     @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
-      if (size != -1) return size;
+      if (size != -1)
+        return size;
 
       size = 0;
       if (envInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getEnvInfo());
+            .computeMessageSize(1, getEnvInfo());
       }
       if (timestamp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, timestamp_);
+            .computeUInt64Size(2, timestamp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -226,21 +246,24 @@ public final class AlicePB {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof alice.dip.AlicePB.NewStateNotification)) {
         return super.equals(obj);
       }
       alice.dip.AlicePB.NewStateNotification other = (alice.dip.AlicePB.NewStateNotification) obj;
 
-      if (hasEnvInfo() != other.hasEnvInfo()) return false;
+      if (hasEnvInfo() != other.hasEnvInfo())
+        return false;
       if (hasEnvInfo()) {
         if (!getEnvInfo()
-            .equals(other.getEnvInfo())) return false;
+            .equals(other.getEnvInfo()))
+          return false;
       }
-      if (getTimestamp()
-          != other.getTimestamp()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getTimestamp() != other.getTimestamp())
+        return false;
+      if (!unknownFields.equals(other.unknownFields))
+        return false;
       return true;
     }
 
@@ -268,38 +291,45 @@ public final class AlicePB {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -307,11 +337,13 @@ public final class AlicePB {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -319,12 +351,14 @@ public final class AlicePB {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.NewStateNotification parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -334,17 +368,23 @@ public final class AlicePB {
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(alice.dip.AlicePB.NewStateNotification prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder()
+          : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -353,6 +393,7 @@ public final class AlicePB {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * Protobuf type {@code alice.dip.NewStateNotification}
      */
@@ -360,14 +401,12 @@ public final class AlicePB {
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:alice.dip.NewStateNotification)
         alice.dip.AlicePB.NewStateNotificationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return alice.dip.AlicePB.internal_static_alice_dip_NewStateNotification_descriptor;
       }
 
       @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
         return alice.dip.AlicePB.internal_static_alice_dip_NewStateNotification_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 alice.dip.AlicePB.NewStateNotification.class, alice.dip.AlicePB.NewStateNotification.Builder.class);
@@ -383,11 +422,12 @@ public final class AlicePB {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         }
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -403,8 +443,7 @@ public final class AlicePB {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
         return alice.dip.AlicePB.internal_static_alice_dip_NewStateNotification_descriptor;
       }
 
@@ -439,38 +478,44 @@ public final class AlicePB {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof alice.dip.AlicePB.NewStateNotification) {
-          return mergeFrom((alice.dip.AlicePB.NewStateNotification)other);
+          return mergeFrom((alice.dip.AlicePB.NewStateNotification) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -478,7 +523,8 @@ public final class AlicePB {
       }
 
       public Builder mergeFrom(alice.dip.AlicePB.NewStateNotification other) {
-        if (other == alice.dip.AlicePB.NewStateNotification.getDefaultInstance()) return this;
+        if (other == alice.dip.AlicePB.NewStateNotification.getDefaultInstance())
+          return this;
         if (other.hasEnvInfo()) {
           mergeEnvInfo(other.getEnvInfo());
         }
@@ -515,17 +561,20 @@ public final class AlicePB {
       }
 
       private alice.dip.AlicePB.EnvInfo envInfo_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> envInfoBuilder_;
+      private com.google.protobuf.SingleFieldBuilderV3<alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> envInfoBuilder_;
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
+       * 
        * @return Whether the envInfo field is set.
        */
       public boolean hasEnvInfo() {
         return envInfoBuilder_ != null || envInfo_ != null;
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
+       * 
        * @return The envInfo.
        */
       public alice.dip.AlicePB.EnvInfo getEnvInfo() {
@@ -535,6 +584,7 @@ public final class AlicePB {
           return envInfoBuilder_.getMessage();
         }
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
        */
@@ -551,6 +601,7 @@ public final class AlicePB {
 
         return this;
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
        */
@@ -565,14 +616,14 @@ public final class AlicePB {
 
         return this;
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
        */
       public Builder mergeEnvInfo(alice.dip.AlicePB.EnvInfo value) {
         if (envInfoBuilder_ == null) {
           if (envInfo_ != null) {
-            envInfo_ =
-              alice.dip.AlicePB.EnvInfo.newBuilder(envInfo_).mergeFrom(value).buildPartial();
+            envInfo_ = alice.dip.AlicePB.EnvInfo.newBuilder(envInfo_).mergeFrom(value).buildPartial();
           } else {
             envInfo_ = value;
           }
@@ -583,6 +634,7 @@ public final class AlicePB {
 
         return this;
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
        */
@@ -597,14 +649,16 @@ public final class AlicePB {
 
         return this;
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
        */
       public alice.dip.AlicePB.EnvInfo.Builder getEnvInfoBuilder() {
-        
+
         onChanged();
         return getEnvInfoFieldBuilder().getBuilder();
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
        */
@@ -612,69 +666,73 @@ public final class AlicePB {
         if (envInfoBuilder_ != null) {
           return envInfoBuilder_.getMessageOrBuilder();
         } else {
-          return envInfo_ == null ?
-              alice.dip.AlicePB.EnvInfo.getDefaultInstance() : envInfo_;
+          return envInfo_ == null ? alice.dip.AlicePB.EnvInfo.getDefaultInstance() : envInfo_;
         }
       }
+
       /**
        * <code>.alice.dip.EnvInfo envInfo = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> 
-          getEnvInfoFieldBuilder() {
+      private com.google.protobuf.SingleFieldBuilderV3<alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> getEnvInfoFieldBuilder() {
         if (envInfoBuilder_ == null) {
-          envInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder>(
-                  getEnvInfo(),
-                  getParentForChildren(),
-                  isClean());
+          envInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder>(
+              getEnvInfo(),
+              getParentForChildren(),
+              isClean());
           envInfo_ = null;
         }
         return envInfoBuilder_;
       }
 
-      private long timestamp_ ;
+      private long timestamp_;
+
       /**
        * <pre>
        * ms since epoch
        * </pre>
        *
        * <code>uint64 timestamp = 2;</code>
+       * 
        * @return The timestamp.
        */
       @java.lang.Override
       public long getTimestamp() {
         return timestamp_;
       }
+
       /**
        * <pre>
        * ms since epoch
        * </pre>
        *
        * <code>uint64 timestamp = 2;</code>
+       * 
        * @param value The timestamp to set.
        * @return This builder for chaining.
        */
       public Builder setTimestamp(long value) {
-        
+
         timestamp_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <pre>
        * ms since epoch
        * </pre>
        *
        * <code>uint64 timestamp = 2;</code>
+       * 
        * @return This builder for chaining.
        */
       public Builder clearTimestamp() {
-        
+
         timestamp_ = 0L;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -686,7 +744,6 @@ public final class AlicePB {
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
-
 
       // @@protoc_insertion_point(builder_scope:alice.dip.NewStateNotification)
     }
@@ -701,8 +758,7 @@ public final class AlicePB {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NewStateNotification>
-        PARSER = new com.google.protobuf.AbstractParser<NewStateNotification>() {
+    private static final com.google.protobuf.Parser<NewStateNotification> PARSER = new com.google.protobuf.AbstractParser<NewStateNotification>() {
       @java.lang.Override
       public NewStateNotification parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
@@ -735,21 +791,23 @@ public final class AlicePB {
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
-    java.util.List<alice.dip.AlicePB.EnvInfo> 
-        getActiveRunsList();
+    java.util.List<alice.dip.AlicePB.EnvInfo> getActiveRunsList();
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
     alice.dip.AlicePB.EnvInfo getActiveRuns(int index);
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
     int getActiveRunsCount();
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
-    java.util.List<? extends alice.dip.AlicePB.EnvInfoOrBuilder> 
-        getActiveRunsOrBuilderList();
+    java.util.List<? extends alice.dip.AlicePB.EnvInfoOrBuilder> getActiveRunsOrBuilderList();
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
@@ -762,10 +820,12 @@ public final class AlicePB {
      * </pre>
      *
      * <code>uint64 timestamp = 2;</code>
+     * 
      * @return The timestamp.
      */
     long getTimestamp();
   }
+
   /**
    * Protobuf type {@code alice.dip.ActiveRunsList}
    */
@@ -773,27 +833,29 @@ public final class AlicePB {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:alice.dip.ActiveRunsList)
       ActiveRunsListOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
+
     // Use ActiveRunsList.newBuilder() to construct.
     private ActiveRunsList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private ActiveRunsList() {
       activeRuns_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
+    @SuppressWarnings({ "unused" })
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new ActiveRunsList();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private ActiveRunsList(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -803,8 +865,7 @@ public final class AlicePB {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -851,14 +912,13 @@ public final class AlicePB {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return alice.dip.AlicePB.internal_static_alice_dip_ActiveRunsList_descriptor;
     }
 
     @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
       return alice.dip.AlicePB.internal_static_alice_dip_ActiveRunsList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               alice.dip.AlicePB.ActiveRunsList.class, alice.dip.AlicePB.ActiveRunsList.Builder.class);
@@ -866,6 +926,7 @@ public final class AlicePB {
 
     public static final int ACTIVERUNS_FIELD_NUMBER = 1;
     private java.util.List<alice.dip.AlicePB.EnvInfo> activeRuns_;
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
@@ -873,14 +934,15 @@ public final class AlicePB {
     public java.util.List<alice.dip.AlicePB.EnvInfo> getActiveRunsList() {
       return activeRuns_;
     }
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends alice.dip.AlicePB.EnvInfoOrBuilder> 
-        getActiveRunsOrBuilderList() {
+    public java.util.List<? extends alice.dip.AlicePB.EnvInfoOrBuilder> getActiveRunsOrBuilderList() {
       return activeRuns_;
     }
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
@@ -888,6 +950,7 @@ public final class AlicePB {
     public int getActiveRunsCount() {
       return activeRuns_.size();
     }
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
@@ -895,6 +958,7 @@ public final class AlicePB {
     public alice.dip.AlicePB.EnvInfo getActiveRuns(int index) {
       return activeRuns_.get(index);
     }
+
     /**
      * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
      */
@@ -906,12 +970,14 @@ public final class AlicePB {
 
     public static final int TIMESTAMP_FIELD_NUMBER = 2;
     private long timestamp_;
+
     /**
      * <pre>
      * ms since epoch
      * </pre>
      *
      * <code>uint64 timestamp = 2;</code>
+     * 
      * @return The timestamp.
      */
     @java.lang.Override
@@ -920,11 +986,14 @@ public final class AlicePB {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+      if (isInitialized == 1)
+        return true;
+      if (isInitialized == 0)
+        return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -932,7 +1001,7 @@ public final class AlicePB {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+        throws java.io.IOException {
       for (int i = 0; i < activeRuns_.size(); i++) {
         output.writeMessage(1, activeRuns_.get(i));
       }
@@ -945,16 +1014,17 @@ public final class AlicePB {
     @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
-      if (size != -1) return size;
+      if (size != -1)
+        return size;
 
       size = 0;
       for (int i = 0; i < activeRuns_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, activeRuns_.get(i));
+            .computeMessageSize(1, activeRuns_.get(i));
       }
       if (timestamp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, timestamp_);
+            .computeUInt64Size(2, timestamp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -964,7 +1034,7 @@ public final class AlicePB {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof alice.dip.AlicePB.ActiveRunsList)) {
         return super.equals(obj);
@@ -972,10 +1042,12 @@ public final class AlicePB {
       alice.dip.AlicePB.ActiveRunsList other = (alice.dip.AlicePB.ActiveRunsList) obj;
 
       if (!getActiveRunsList()
-          .equals(other.getActiveRunsList())) return false;
-      if (getTimestamp()
-          != other.getTimestamp()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+          .equals(other.getActiveRunsList()))
+        return false;
+      if (getTimestamp() != other.getTimestamp())
+        return false;
+      if (!unknownFields.equals(other.unknownFields))
+        return false;
       return true;
     }
 
@@ -1003,38 +1075,45 @@ public final class AlicePB {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1042,11 +1121,13 @@ public final class AlicePB {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1054,12 +1135,14 @@ public final class AlicePB {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.ActiveRunsList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1069,17 +1152,23 @@ public final class AlicePB {
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(alice.dip.AlicePB.ActiveRunsList prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder()
+          : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -1088,6 +1177,7 @@ public final class AlicePB {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * Protobuf type {@code alice.dip.ActiveRunsList}
      */
@@ -1095,14 +1185,12 @@ public final class AlicePB {
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:alice.dip.ActiveRunsList)
         alice.dip.AlicePB.ActiveRunsListOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return alice.dip.AlicePB.internal_static_alice_dip_ActiveRunsList_descriptor;
       }
 
       @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
         return alice.dip.AlicePB.internal_static_alice_dip_ActiveRunsList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 alice.dip.AlicePB.ActiveRunsList.class, alice.dip.AlicePB.ActiveRunsList.Builder.class);
@@ -1118,12 +1206,13 @@ public final class AlicePB {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
           getActiveRunsFieldBuilder();
         }
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1139,8 +1228,7 @@ public final class AlicePB {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
         return alice.dip.AlicePB.internal_static_alice_dip_ActiveRunsList_descriptor;
       }
 
@@ -1180,38 +1268,44 @@ public final class AlicePB {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof alice.dip.AlicePB.ActiveRunsList) {
-          return mergeFrom((alice.dip.AlicePB.ActiveRunsList)other);
+          return mergeFrom((alice.dip.AlicePB.ActiveRunsList) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -1219,7 +1313,8 @@ public final class AlicePB {
       }
 
       public Builder mergeFrom(alice.dip.AlicePB.ActiveRunsList other) {
-        if (other == alice.dip.AlicePB.ActiveRunsList.getDefaultInstance()) return this;
+        if (other == alice.dip.AlicePB.ActiveRunsList.getDefaultInstance())
+          return this;
         if (activeRunsBuilder_ == null) {
           if (!other.activeRuns_.isEmpty()) {
             if (activeRuns_.isEmpty()) {
@@ -1238,9 +1333,9 @@ public final class AlicePB {
               activeRunsBuilder_ = null;
               activeRuns_ = other.activeRuns_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              activeRunsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getActiveRunsFieldBuilder() : null;
+              activeRunsBuilder_ = com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                  ? getActiveRunsFieldBuilder()
+                  : null;
             } else {
               activeRunsBuilder_.addAllMessages(other.activeRuns_);
             }
@@ -1277,19 +1372,19 @@ public final class AlicePB {
         }
         return this;
       }
+
       private int bitField0_;
 
-      private java.util.List<alice.dip.AlicePB.EnvInfo> activeRuns_ =
-        java.util.Collections.emptyList();
+      private java.util.List<alice.dip.AlicePB.EnvInfo> activeRuns_ = java.util.Collections.emptyList();
+
       private void ensureActiveRunsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           activeRuns_ = new java.util.ArrayList<alice.dip.AlicePB.EnvInfo>(activeRuns_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> activeRunsBuilder_;
+      private com.google.protobuf.RepeatedFieldBuilderV3<alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> activeRunsBuilder_;
 
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
@@ -1301,6 +1396,7 @@ public final class AlicePB {
           return activeRunsBuilder_.getMessageList();
         }
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1311,6 +1407,7 @@ public final class AlicePB {
           return activeRunsBuilder_.getCount();
         }
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1321,6 +1418,7 @@ public final class AlicePB {
           return activeRunsBuilder_.getMessage(index);
         }
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1338,6 +1436,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1352,6 +1451,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1368,6 +1468,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1385,6 +1486,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1399,6 +1501,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1413,6 +1516,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1428,6 +1532,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1441,6 +1546,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1454,6 +1560,7 @@ public final class AlicePB {
         }
         return this;
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1461,27 +1568,30 @@ public final class AlicePB {
           int index) {
         return getActiveRunsFieldBuilder().getBuilder(index);
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
       public alice.dip.AlicePB.EnvInfoOrBuilder getActiveRunsOrBuilder(
           int index) {
         if (activeRunsBuilder_ == null) {
-          return activeRuns_.get(index);  } else {
+          return activeRuns_.get(index);
+        } else {
           return activeRunsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
-      public java.util.List<? extends alice.dip.AlicePB.EnvInfoOrBuilder> 
-           getActiveRunsOrBuilderList() {
+      public java.util.List<? extends alice.dip.AlicePB.EnvInfoOrBuilder> getActiveRunsOrBuilderList() {
         if (activeRunsBuilder_ != null) {
           return activeRunsBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(activeRuns_);
         }
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1489,6 +1599,7 @@ public final class AlicePB {
         return getActiveRunsFieldBuilder().addBuilder(
             alice.dip.AlicePB.EnvInfo.getDefaultInstance());
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
@@ -1497,70 +1608,75 @@ public final class AlicePB {
         return getActiveRunsFieldBuilder().addBuilder(
             index, alice.dip.AlicePB.EnvInfo.getDefaultInstance());
       }
+
       /**
        * <code>repeated .alice.dip.EnvInfo activeRuns = 1;</code>
        */
-      public java.util.List<alice.dip.AlicePB.EnvInfo.Builder> 
-           getActiveRunsBuilderList() {
+      public java.util.List<alice.dip.AlicePB.EnvInfo.Builder> getActiveRunsBuilderList() {
         return getActiveRunsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> 
-          getActiveRunsFieldBuilder() {
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder> getActiveRunsFieldBuilder() {
         if (activeRunsBuilder_ == null) {
-          activeRunsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder>(
-                  activeRuns_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
+          activeRunsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<alice.dip.AlicePB.EnvInfo, alice.dip.AlicePB.EnvInfo.Builder, alice.dip.AlicePB.EnvInfoOrBuilder>(
+              activeRuns_,
+              ((bitField0_ & 0x00000001) != 0),
+              getParentForChildren(),
+              isClean());
           activeRuns_ = null;
         }
         return activeRunsBuilder_;
       }
 
-      private long timestamp_ ;
+      private long timestamp_;
+
       /**
        * <pre>
        * ms since epoch
        * </pre>
        *
        * <code>uint64 timestamp = 2;</code>
+       * 
        * @return The timestamp.
        */
       @java.lang.Override
       public long getTimestamp() {
         return timestamp_;
       }
+
       /**
        * <pre>
        * ms since epoch
        * </pre>
        *
        * <code>uint64 timestamp = 2;</code>
+       * 
        * @param value The timestamp to set.
        * @return This builder for chaining.
        */
       public Builder setTimestamp(long value) {
-        
+
         timestamp_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <pre>
        * ms since epoch
        * </pre>
        *
        * <code>uint64 timestamp = 2;</code>
+       * 
        * @return This builder for chaining.
        */
       public Builder clearTimestamp() {
-        
+
         timestamp_ = 0L;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1572,7 +1688,6 @@ public final class AlicePB {
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
-
 
       // @@protoc_insertion_point(builder_scope:alice.dip.ActiveRunsList)
     }
@@ -1587,8 +1702,7 @@ public final class AlicePB {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ActiveRunsList>
-        PARSER = new com.google.protobuf.AbstractParser<ActiveRunsList>() {
+    private static final com.google.protobuf.Parser<ActiveRunsList> PARSER = new com.google.protobuf.AbstractParser<ActiveRunsList>() {
       @java.lang.Override
       public ActiveRunsList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
@@ -1620,81 +1734,98 @@ public final class AlicePB {
 
     /**
      * <code>string environmentId = 1;</code>
+     * 
      * @return The environmentId.
      */
     java.lang.String getEnvironmentId();
+
     /**
      * <code>string environmentId = 1;</code>
+     * 
      * @return The bytes for environmentId.
      */
-    com.google.protobuf.ByteString
-        getEnvironmentIdBytes();
+    com.google.protobuf.ByteString getEnvironmentIdBytes();
 
     /**
      * <code>optional uint32 runNumber = 2;</code>
+     * 
      * @return Whether the runNumber field is set.
      */
     boolean hasRunNumber();
+
     /**
      * <code>optional uint32 runNumber = 2;</code>
+     * 
      * @return The runNumber.
      */
     int getRunNumber();
 
     /**
      * <code>optional string runType = 3;</code>
+     * 
      * @return Whether the runType field is set.
      */
     boolean hasRunType();
+
     /**
      * <code>optional string runType = 3;</code>
+     * 
      * @return The runType.
      */
     java.lang.String getRunType();
+
     /**
      * <code>optional string runType = 3;</code>
+     * 
      * @return The bytes for runType.
      */
-    com.google.protobuf.ByteString
-        getRunTypeBytes();
+    com.google.protobuf.ByteString getRunTypeBytes();
 
     /**
      * <code>string state = 4;</code>
+     * 
      * @return The state.
      */
     java.lang.String getState();
+
     /**
      * <code>string state = 4;</code>
+     * 
      * @return The bytes for state.
      */
-    com.google.protobuf.ByteString
-        getStateBytes();
+    com.google.protobuf.ByteString getStateBytes();
 
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @return A list containing the detectors.
      */
-    java.util.List<java.lang.String>
-        getDetectorsList();
+    java.util.List<java.lang.String> getDetectorsList();
+
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @return The count of detectors.
      */
     int getDetectorsCount();
+
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @param index The index of the element to return.
      * @return The detectors at the given index.
      */
     java.lang.String getDetectors(int index);
+
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @param index The index of the value to return.
      * @return The bytes of the detectors at the given index.
      */
-    com.google.protobuf.ByteString
-        getDetectorsBytes(int index);
+    com.google.protobuf.ByteString getDetectorsBytes(int index);
   }
+
   /**
    * Protobuf type {@code alice.dip.EnvInfo}
    */
@@ -1702,11 +1833,13 @@ public final class AlicePB {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:alice.dip.EnvInfo)
       EnvInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
+
     // Use EnvInfo.newBuilder() to construct.
     private EnvInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private EnvInfo() {
       environmentId_ = "";
       runType_ = "";
@@ -1715,17 +1848,17 @@ public final class AlicePB {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
+    @SuppressWarnings({ "unused" })
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new EnvInfo();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private EnvInfo(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1735,8 +1868,7 @@ public final class AlicePB {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1801,14 +1933,13 @@ public final class AlicePB {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return alice.dip.AlicePB.internal_static_alice_dip_EnvInfo_descriptor;
     }
 
     @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
       return alice.dip.AlicePB.internal_static_alice_dip_EnvInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               alice.dip.AlicePB.EnvInfo.class, alice.dip.AlicePB.EnvInfo.Builder.class);
@@ -1817,8 +1948,10 @@ public final class AlicePB {
     private int bitField0_;
     public static final int ENVIRONMENTID_FIELD_NUMBER = 1;
     private volatile java.lang.Object environmentId_;
+
     /**
      * <code>string environmentId = 1;</code>
+     * 
      * @return The environmentId.
      */
     @java.lang.Override
@@ -1827,25 +1960,24 @@ public final class AlicePB {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         environmentId_ = s;
         return s;
       }
     }
+
     /**
      * <code>string environmentId = 1;</code>
+     * 
      * @return The bytes for environmentId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getEnvironmentIdBytes() {
+    public com.google.protobuf.ByteString getEnvironmentIdBytes() {
       java.lang.Object ref = environmentId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8(
+            (java.lang.String) ref);
         environmentId_ = b;
         return b;
       } else {
@@ -1855,16 +1987,20 @@ public final class AlicePB {
 
     public static final int RUNNUMBER_FIELD_NUMBER = 2;
     private int runNumber_;
+
     /**
      * <code>optional uint32 runNumber = 2;</code>
+     * 
      * @return Whether the runNumber field is set.
      */
     @java.lang.Override
     public boolean hasRunNumber() {
       return ((bitField0_ & 0x00000001) != 0);
     }
+
     /**
      * <code>optional uint32 runNumber = 2;</code>
+     * 
      * @return The runNumber.
      */
     @java.lang.Override
@@ -1874,16 +2010,20 @@ public final class AlicePB {
 
     public static final int RUNTYPE_FIELD_NUMBER = 3;
     private volatile java.lang.Object runType_;
+
     /**
      * <code>optional string runType = 3;</code>
+     * 
      * @return Whether the runType field is set.
      */
     @java.lang.Override
     public boolean hasRunType() {
       return ((bitField0_ & 0x00000002) != 0);
     }
+
     /**
      * <code>optional string runType = 3;</code>
+     * 
      * @return The runType.
      */
     @java.lang.Override
@@ -1892,25 +2032,24 @@ public final class AlicePB {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         runType_ = s;
         return s;
       }
     }
+
     /**
      * <code>optional string runType = 3;</code>
+     * 
      * @return The bytes for runType.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRunTypeBytes() {
+    public com.google.protobuf.ByteString getRunTypeBytes() {
       java.lang.Object ref = runType_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8(
+            (java.lang.String) ref);
         runType_ = b;
         return b;
       } else {
@@ -1920,8 +2059,10 @@ public final class AlicePB {
 
     public static final int STATE_FIELD_NUMBER = 4;
     private volatile java.lang.Object state_;
+
     /**
      * <code>string state = 4;</code>
+     * 
      * @return The state.
      */
     @java.lang.Override
@@ -1930,25 +2071,24 @@ public final class AlicePB {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         state_ = s;
         return s;
       }
     }
+
     /**
      * <code>string state = 4;</code>
+     * 
      * @return The bytes for state.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getStateBytes() {
+    public com.google.protobuf.ByteString getStateBytes() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8(
+            (java.lang.String) ref);
         state_ = b;
         return b;
       } else {
@@ -1958,45 +2098,54 @@ public final class AlicePB {
 
     public static final int DETECTORS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList detectors_;
+
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @return A list containing the detectors.
      */
-    public com.google.protobuf.ProtocolStringList
-        getDetectorsList() {
+    public com.google.protobuf.ProtocolStringList getDetectorsList() {
       return detectors_;
     }
+
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @return The count of detectors.
      */
     public int getDetectorsCount() {
       return detectors_.size();
     }
+
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @param index The index of the element to return.
      * @return The detectors at the given index.
      */
     public java.lang.String getDetectors(int index) {
       return detectors_.get(index);
     }
+
     /**
      * <code>repeated string detectors = 5;</code>
+     * 
      * @param index The index of the value to return.
      * @return The bytes of the detectors at the given index.
      */
-    public com.google.protobuf.ByteString
-        getDetectorsBytes(int index) {
+    public com.google.protobuf.ByteString getDetectorsBytes(int index) {
       return detectors_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+      if (isInitialized == 1)
+        return true;
+      if (isInitialized == 0)
+        return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -2004,7 +2153,7 @@ public final class AlicePB {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(environmentId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, environmentId_);
       }
@@ -2026,7 +2175,8 @@ public final class AlicePB {
     @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
-      if (size != -1) return size;
+      if (size != -1)
+        return size;
 
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(environmentId_)) {
@@ -2034,7 +2184,7 @@ public final class AlicePB {
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, runNumber_);
+            .computeUInt32Size(2, runNumber_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, runType_);
@@ -2058,7 +2208,7 @@ public final class AlicePB {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof alice.dip.AlicePB.EnvInfo)) {
         return super.equals(obj);
@@ -2066,22 +2216,29 @@ public final class AlicePB {
       alice.dip.AlicePB.EnvInfo other = (alice.dip.AlicePB.EnvInfo) obj;
 
       if (!getEnvironmentId()
-          .equals(other.getEnvironmentId())) return false;
-      if (hasRunNumber() != other.hasRunNumber()) return false;
+          .equals(other.getEnvironmentId()))
+        return false;
+      if (hasRunNumber() != other.hasRunNumber())
+        return false;
       if (hasRunNumber()) {
-        if (getRunNumber()
-            != other.getRunNumber()) return false;
+        if (getRunNumber() != other.getRunNumber())
+          return false;
       }
-      if (hasRunType() != other.hasRunType()) return false;
+      if (hasRunType() != other.hasRunType())
+        return false;
       if (hasRunType()) {
         if (!getRunType()
-            .equals(other.getRunType())) return false;
+            .equals(other.getRunType()))
+          return false;
       }
       if (!getState()
-          .equals(other.getState())) return false;
+          .equals(other.getState()))
+        return false;
       if (!getDetectorsList()
-          .equals(other.getDetectorsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+          .equals(other.getDetectorsList()))
+        return false;
+      if (!unknownFields.equals(other.unknownFields))
+        return false;
       return true;
     }
 
@@ -2118,38 +2275,45 @@ public final class AlicePB {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2157,11 +2321,13 @@ public final class AlicePB {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2169,12 +2335,14 @@ public final class AlicePB {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static alice.dip.AlicePB.EnvInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2184,17 +2352,23 @@ public final class AlicePB {
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(alice.dip.AlicePB.EnvInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder()
+          : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -2203,6 +2377,7 @@ public final class AlicePB {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * Protobuf type {@code alice.dip.EnvInfo}
      */
@@ -2210,14 +2385,12 @@ public final class AlicePB {
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:alice.dip.EnvInfo)
         alice.dip.AlicePB.EnvInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return alice.dip.AlicePB.internal_static_alice_dip_EnvInfo_descriptor;
       }
 
       @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
         return alice.dip.AlicePB.internal_static_alice_dip_EnvInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 alice.dip.AlicePB.EnvInfo.class, alice.dip.AlicePB.EnvInfo.Builder.class);
@@ -2233,11 +2406,12 @@ public final class AlicePB {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         }
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -2255,8 +2429,7 @@ public final class AlicePB {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
         return alice.dip.AlicePB.internal_static_alice_dip_EnvInfo_descriptor;
       }
 
@@ -2303,38 +2476,44 @@ public final class AlicePB {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof alice.dip.AlicePB.EnvInfo) {
-          return mergeFrom((alice.dip.AlicePB.EnvInfo)other);
+          return mergeFrom((alice.dip.AlicePB.EnvInfo) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -2342,7 +2521,8 @@ public final class AlicePB {
       }
 
       public Builder mergeFrom(alice.dip.AlicePB.EnvInfo other) {
-        if (other == alice.dip.AlicePB.EnvInfo.getDefaultInstance()) return this;
+        if (other == alice.dip.AlicePB.EnvInfo.getDefaultInstance())
+          return this;
         if (!other.getEnvironmentId().isEmpty()) {
           environmentId_ = other.environmentId_;
           onChanged();
@@ -2397,18 +2577,20 @@ public final class AlicePB {
         }
         return this;
       }
+
       private int bitField0_;
 
       private java.lang.Object environmentId_ = "";
+
       /**
        * <code>string environmentId = 1;</code>
+       * 
        * @return The environmentId.
        */
       public java.lang.String getEnvironmentId() {
         java.lang.Object ref = environmentId_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           environmentId_ = s;
           return s;
@@ -2416,84 +2598,96 @@ public final class AlicePB {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string environmentId = 1;</code>
+       * 
        * @return The bytes for environmentId.
        */
-      public com.google.protobuf.ByteString
-          getEnvironmentIdBytes() {
+      public com.google.protobuf.ByteString getEnvironmentIdBytes() {
         java.lang.Object ref = environmentId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
           environmentId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string environmentId = 1;</code>
+       * 
        * @param value The environmentId to set.
        * @return This builder for chaining.
        */
       public Builder setEnvironmentId(
           java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         environmentId_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string environmentId = 1;</code>
+       * 
        * @return This builder for chaining.
        */
       public Builder clearEnvironmentId() {
-        
+
         environmentId_ = getDefaultInstance().getEnvironmentId();
         onChanged();
         return this;
       }
+
       /**
        * <code>string environmentId = 1;</code>
+       * 
        * @param value The bytes for environmentId to set.
        * @return This builder for chaining.
        */
       public Builder setEnvironmentIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         environmentId_ = value;
         onChanged();
         return this;
       }
 
-      private int runNumber_ ;
+      private int runNumber_;
+
       /**
        * <code>optional uint32 runNumber = 2;</code>
+       * 
        * @return Whether the runNumber field is set.
        */
       @java.lang.Override
       public boolean hasRunNumber() {
         return ((bitField0_ & 0x00000001) != 0);
       }
+
       /**
        * <code>optional uint32 runNumber = 2;</code>
+       * 
        * @return The runNumber.
        */
       @java.lang.Override
       public int getRunNumber() {
         return runNumber_;
       }
+
       /**
        * <code>optional uint32 runNumber = 2;</code>
+       * 
        * @param value The runNumber to set.
        * @return This builder for chaining.
        */
@@ -2503,8 +2697,10 @@ public final class AlicePB {
         onChanged();
         return this;
       }
+
       /**
        * <code>optional uint32 runNumber = 2;</code>
+       * 
        * @return This builder for chaining.
        */
       public Builder clearRunNumber() {
@@ -2515,22 +2711,25 @@ public final class AlicePB {
       }
 
       private java.lang.Object runType_ = "";
+
       /**
        * <code>optional string runType = 3;</code>
+       * 
        * @return Whether the runType field is set.
        */
       public boolean hasRunType() {
         return ((bitField0_ & 0x00000002) != 0);
       }
+
       /**
        * <code>optional string runType = 3;</code>
+       * 
        * @return The runType.
        */
       public java.lang.String getRunType() {
         java.lang.Object ref = runType_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           runType_ = s;
           return s;
@@ -2538,40 +2737,44 @@ public final class AlicePB {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>optional string runType = 3;</code>
+       * 
        * @return The bytes for runType.
        */
-      public com.google.protobuf.ByteString
-          getRunTypeBytes() {
+      public com.google.protobuf.ByteString getRunTypeBytes() {
         java.lang.Object ref = runType_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
           runType_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>optional string runType = 3;</code>
+       * 
        * @param value The runType to set.
        * @return This builder for chaining.
        */
       public Builder setRunType(
           java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
         runType_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>optional string runType = 3;</code>
+       * 
        * @return This builder for chaining.
        */
       public Builder clearRunType() {
@@ -2580,17 +2783,19 @@ public final class AlicePB {
         onChanged();
         return this;
       }
+
       /**
        * <code>optional string runType = 3;</code>
+       * 
        * @param value The bytes for runType to set.
        * @return This builder for chaining.
        */
       public Builder setRunTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
         bitField0_ |= 0x00000002;
         runType_ = value;
         onChanged();
@@ -2598,15 +2803,16 @@ public final class AlicePB {
       }
 
       private java.lang.Object state_ = "";
+
       /**
        * <code>string state = 4;</code>
+       * 
        * @return The state.
        */
       public java.lang.String getState() {
         java.lang.Object ref = state_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           state_ = s;
           return s;
@@ -2614,106 +2820,121 @@ public final class AlicePB {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string state = 4;</code>
+       * 
        * @return The bytes for state.
        */
-      public com.google.protobuf.ByteString
-          getStateBytes() {
+      public com.google.protobuf.ByteString getStateBytes() {
         java.lang.Object ref = state_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
           state_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string state = 4;</code>
+       * 
        * @param value The state to set.
        * @return This builder for chaining.
        */
       public Builder setState(
           java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         state_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string state = 4;</code>
+       * 
        * @return This builder for chaining.
        */
       public Builder clearState() {
-        
+
         state_ = getDefaultInstance().getState();
         onChanged();
         return this;
       }
+
       /**
        * <code>string state = 4;</code>
+       * 
        * @param value The bytes for state to set.
        * @return This builder for chaining.
        */
       public Builder setStateBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         state_ = value;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList detectors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+
       private void ensureDetectorsIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
           detectors_ = new com.google.protobuf.LazyStringArrayList(detectors_);
           bitField0_ |= 0x00000004;
-         }
+        }
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @return A list containing the detectors.
        */
-      public com.google.protobuf.ProtocolStringList
-          getDetectorsList() {
+      public com.google.protobuf.ProtocolStringList getDetectorsList() {
         return detectors_.getUnmodifiableView();
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @return The count of detectors.
        */
       public int getDetectorsCount() {
         return detectors_.size();
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @param index The index of the element to return.
        * @return The detectors at the given index.
        */
       public java.lang.String getDetectors(int index) {
         return detectors_.get(index);
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @param index The index of the value to return.
        * @return The bytes of the detectors at the given index.
        */
-      public com.google.protobuf.ByteString
-          getDetectorsBytes(int index) {
+      public com.google.protobuf.ByteString getDetectorsBytes(int index) {
         return detectors_.getByteString(index);
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @param index The index to set the value at.
        * @param value The detectors to set.
        * @return This builder for chaining.
@@ -2721,30 +2942,34 @@ public final class AlicePB {
       public Builder setDetectors(
           int index, java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDetectorsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureDetectorsIsMutable();
         detectors_.set(index, value);
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @param value The detectors to add.
        * @return This builder for chaining.
        */
       public Builder addDetectors(
           java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDetectorsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureDetectorsIsMutable();
         detectors_.add(value);
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @param values The detectors to add.
        * @return This builder for chaining.
        */
@@ -2756,8 +2981,10 @@ public final class AlicePB {
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @return This builder for chaining.
        */
       public Builder clearDetectors() {
@@ -2766,22 +2993,25 @@ public final class AlicePB {
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string detectors = 5;</code>
+       * 
        * @param value The bytes of the detectors to add.
        * @return This builder for chaining.
        */
       public Builder addDetectorsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
         ensureDetectorsIsMutable();
         detectors_.add(value);
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2793,7 +3023,6 @@ public final class AlicePB {
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
-
 
       // @@protoc_insertion_point(builder_scope:alice.dip.EnvInfo)
     }
@@ -2808,8 +3037,7 @@ public final class AlicePB {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EnvInfo>
-        PARSER = new com.google.protobuf.AbstractParser<EnvInfo>() {
+    private static final com.google.protobuf.Parser<EnvInfo> PARSER = new com.google.protobuf.AbstractParser<EnvInfo>() {
       @java.lang.Override
       public EnvInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
@@ -2835,62 +3063,47 @@ public final class AlicePB {
 
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_alice_dip_NewStateNotification_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_alice_dip_NewStateNotification_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_alice_dip_ActiveRunsList_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_alice_dip_ActiveRunsList_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_alice_dip_EnvInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_alice_dip_EnvInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor internal_static_alice_dip_NewStateNotification_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_alice_dip_NewStateNotification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor internal_static_alice_dip_ActiveRunsList_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_alice_dip_ActiveRunsList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor internal_static_alice_dip_EnvInfo_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_alice_dip_EnvInfo_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+
+  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rAlicePB.proto\022\talice.dip\"N\n\024NewStateNo" +
-      "tification\022#\n\007envInfo\030\001 \001(\0132\022.alice.dip." +
-      "EnvInfo\022\021\n\ttimestamp\030\002 \001(\004\"K\n\016ActiveRuns" +
-      "List\022&\n\nactiveRuns\030\001 \003(\0132\022.alice.dip.Env" +
-      "Info\022\021\n\ttimestamp\030\002 \001(\004\"\212\001\n\007EnvInfo\022\025\n\re" +
-      "nvironmentId\030\001 \001(\t\022\026\n\trunNumber\030\002 \001(\rH\000\210" +
-      "\001\001\022\024\n\007runType\030\003 \001(\tH\001\210\001\001\022\r\n\005state\030\004 \001(\t\022" +
-      "\021\n\tdetectors\030\005 \003(\tB\014\n\n_runNumberB\n\n\010_run" +
-      "TypeB\016Z\014protos;kafkab\006proto3"
+        "\n\rAlicePB.proto\022\talice.dip\"N\n\024NewStateNo" +
+            "tification\022#\n\007envInfo\030\001 \001(\0132\022.alice.dip." +
+            "EnvInfo\022\021\n\ttimestamp\030\002 \001(\004\"K\n\016ActiveRuns" +
+            "List\022&\n\nactiveRuns\030\001 \003(\0132\022.alice.dip.Env" +
+            "Info\022\021\n\ttimestamp\030\002 \001(\004\"\212\001\n\007EnvInfo\022\025\n\re" +
+            "nvironmentId\030\001 \001(\t\022\026\n\trunNumber\030\002 \001(\rH\000\210" +
+            "\001\001\022\024\n\007runType\030\003 \001(\tH\001\210\001\001\022\r\n\005state\030\004 \001(\t\022" +
+            "\021\n\tdetectors\030\005 \003(\tB\014\n\n_runNumberB\n\n\010_run" +
+            "TypeB\016Z\014protos;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_alice_dip_NewStateNotification_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_alice_dip_NewStateNotification_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        .internalBuildGeneratedFileFrom(descriptorData,
+            new com.google.protobuf.Descriptors.FileDescriptor[] {
+            });
+    internal_static_alice_dip_NewStateNotification_descriptor = getDescriptor().getMessageTypes().get(0);
+    internal_static_alice_dip_NewStateNotification_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_alice_dip_NewStateNotification_descriptor,
         new java.lang.String[] { "EnvInfo", "Timestamp", });
-    internal_static_alice_dip_ActiveRunsList_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_alice_dip_ActiveRunsList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+    internal_static_alice_dip_ActiveRunsList_descriptor = getDescriptor().getMessageTypes().get(1);
+    internal_static_alice_dip_ActiveRunsList_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_alice_dip_ActiveRunsList_descriptor,
         new java.lang.String[] { "ActiveRuns", "Timestamp", });
-    internal_static_alice_dip_EnvInfo_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_alice_dip_EnvInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+    internal_static_alice_dip_EnvInfo_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_alice_dip_EnvInfo_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_alice_dip_EnvInfo_descriptor,
-        new java.lang.String[] { "EnvironmentId", "RunNumber", "RunType", "State", "Detectors", "RunNumber", "RunType", });
+        new java.lang.String[] { "EnvironmentId", "RunNumber", "RunType", "State", "Detectors", "RunNumber",
+            "RunType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
