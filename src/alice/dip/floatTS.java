@@ -17,11 +17,12 @@ public class floatTS implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public long time;
 	public float value;
-	
-	public floatTS() {} 
-	public floatTS ( long time, float value) {
-		this.time= time;
+
+	public floatTS() {
+	}
+
+	public floatTS(long time, float value) {
+		this.time = time;
 		this.value = value;
 	}
 }
-
