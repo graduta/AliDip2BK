@@ -35,6 +35,7 @@ public class AliDip2BK implements Runnable {
 	static public String OUTPUT_FILE = null;
 
 	public static String BKURL = "http://aliecs-kafka-1.cern.ch:4000";
+	public static String BKP_TOKEN = null;
 
 	public static boolean SAVE_PARAMETERS_HISTORY_PER_RUN = false;
 
@@ -286,6 +287,10 @@ public class AliDip2BK implements Runnable {
 
 			if (bkurl != null) {
 				BKURL = bkurl;
+			}
+			String bkpToken = prop.getProperty(("BKP_TOKEN"));
+			if (bkpToken != null) {
+				BKP_TOKEN = bkpToken;
 			}
 
 		} catch (IOException ex) {
