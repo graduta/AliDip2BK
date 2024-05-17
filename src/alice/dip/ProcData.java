@@ -239,7 +239,7 @@ public class ProcData implements Runnable {
 
 				double v1 = (double) v;
 
-				double v2 = v1 / 1000.0; // in m
+				double v2 = v1 / 100.0; // in m
 
 				newBetaStar(time, (float) v2);
 
